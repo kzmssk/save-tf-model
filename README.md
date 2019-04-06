@@ -8,6 +8,8 @@ Exmaple of saving tf model in python and reusing it in js.
 2. `pipenv run githooks`
 3. `bash init.sh`
 
+Note that you need to run `pipenv run githooks` again when you update `.githooks.ini`.
+
 ## how to test
 
 `pipenv run test`

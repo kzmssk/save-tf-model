@@ -3,6 +3,7 @@ import numpy as np
 import tensorflow as tf
 from models.my_model import MyModel
 
+
 def test_run_forward():
     my_model = MyModel()
 
@@ -17,6 +18,3 @@ def test_run_forward():
     y_data = sess.run(y, {x: x_data})
 
     assert y_data.shape == (1, 2)
-
-
-    

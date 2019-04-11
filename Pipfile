@@ -8,6 +8,7 @@ tensorflow = "*"
 "autopep8" = "*"
 ipdb = "*"
 python-githooks = "*"
+pytest = "*"
 
 [dev-packages]
 pytest = "*"

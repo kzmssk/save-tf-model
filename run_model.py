@@ -17,6 +17,9 @@ def run_model():
 
         print(y_data)
 
+        for v in tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope="my_model"):
+            print(v)
+
 
 if __name__ == '__main__':
     run_model()

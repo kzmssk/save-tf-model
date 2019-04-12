@@ -10,9 +10,18 @@ Exmaple of saving tf model in python and reusing it in js.
 
 Note that you need to run `pipenv run githooks` again when you update `.githooks.ini`.
 
+## save model
+
+`pipenv run python save_model.py`
+
+## load saved model in python
+
+`pipenv run python load_model.py`
+
 ## how to test
 
 `pipenv run test`
+
 
 ## notes for contributing
 

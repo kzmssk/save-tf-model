@@ -17,4 +17,6 @@ pytest = "*"
 python_version = "3.6"
 
 [scripts]
+init = "bash init.sh"
 fix = "autopep8 -vir ."
+test = "pytest"

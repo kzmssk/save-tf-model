@@ -3,6 +3,9 @@ import tensorflow as tf
 
 
 class MyModel(tf.keras.Model):
+
+    name = 'my_model'
+
     def __init__(self):
         super().__init__()
 

@@ -27,6 +27,10 @@ def save_model():
             outputs={"outputs": y}
         )
 
+        input_name, output_name = my_model.get_io_names()
+        print(f"input name = {input_name}")
+        print(f"output name = {output_name}")
+
 
 if __name__ == "__main__":
     save_model()

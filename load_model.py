@@ -11,13 +11,16 @@ def load_model():
 
     sess = tf.Session()
 
-    tf.saved_model.loader.load(
+    metagraph = tf.saved_model.loader.load(
         sess,
         [tf.saved_model.tag_constants.SERVING],
         export_dir)
 
-    x = sess.graph.get_tensor_by_name("input:0")
-    y = sess.graph.get_tensor_by_name("my_model/output:0")
+    input_name = metagraph.signature_def["serving_default"].inputs["inputs"].name
+    output_name = metagraph.signature_def["serving_default"].outputs["outputs"].name
+
+    x = sess.graph.get_tensor_by_name(input_name)
+    y = sess.graph.get_tensor_by_name(output_name)
 
     result = sess.run(y, {x: np.array([[1, 2]], dtype=np.float32)})
     print(f"y = {result}")
